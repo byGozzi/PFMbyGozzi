@@ -6,6 +6,7 @@
 //        mode = 0 code ; mode = 1 decode (interrupt capable)
 //        min = min value to code/decode
 //        max = max value to code/decode
+// decode -32000 if no connection
 PFM::PFM(int pin, int mode, int  min, int max) // code->mode=0; decode->mode=1
 {
   _pin = pin;
