@@ -18,11 +18,11 @@ class PFM
     int _valueOld;
     int _delta;
   public:
-    PFM(int pin, int mode, int  min, int max);
-    void code(int value);
-    void codeStop();
-    void decodeReset();
-    int decode();
-    void update();
+    PFM(int pin, int mode, int  min, int max); // CONSTRUCTOR
+    void code(int value); // start code (modulation from 1024 to 6144 Hz)
+    void codeStop(); // stop code
+    void decodeReset(); // reset decode (pulses counter set to 0)
+    int decode(); // read last decoded value (every 200ms library create new value)
+    void update(); // refresh in loop
 };
 #endif
